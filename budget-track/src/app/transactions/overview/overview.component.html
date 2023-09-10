@@ -1,0 +1,39 @@
+<div class="overview-container">
+  <form>
+    <div class="flex filter-form">
+      <div>
+        <mat-form-field class="overview-item" appearance="outline" subscriptSizing="dynamic">
+          <mat-label>Month</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of months" [value]="item">{{
+              item
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="overview-item" appearance="outline" subscriptSizing="dynamic">
+          <mat-label>Year</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of years" [value]="item">{{
+              item
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <button
+        mat-raised-button
+        type="submit"
+        style="background-color: black; color: white"
+      >
+        Fetch
+      </button>
+    </div>
+  </form>
+  <section class="section1">
+    <div>
+        <div class="cash-flow-overview"></div>
+        
+    </div>
+  </section>
+</div>

@@ -1,0 +1,65 @@
+:root{
+    --amount-green: #008000;
+    --amount-red: #ff0000;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100%; 
+}
+
+html{
+    /* background-repeat: no-repeat; */
+    /* background-position: 50%; */
+    /* background-size: cover; */
+    min-height: 100vh;
+    min-width: 450px;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.set-green{
+    color: var(--amount-green);
+}
+
+.set-red{
+    color: var(--amount-red);
+}
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.example-card{
+    max-width: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+.heading{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.center-div{
+    margin: 0 auto;
+}
+
+   
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

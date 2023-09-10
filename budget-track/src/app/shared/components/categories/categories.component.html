@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="flex categories">
+        <div class="item flex" *ngFor="let item of this.categories; let i=index">
+            <span><mat-icon>{{getCategoryName(item.categoryName)}}</mat-icon></span><span>{{item.categoryName}}</span>
+        </div>
+    </div>
+</div>
