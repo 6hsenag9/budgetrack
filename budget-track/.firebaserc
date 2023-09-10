@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "budgettrack-e4c3d": {
+      "hosting": {
+        "budget-track": [
+          "budgettrack-e4c3d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "budgettrack-e4c3d"
+  }
+}
