@@ -1,6 +1,5 @@
 export interface Categories {
     categoryName: string,
-    id: string
 }
 
 export interface categoryIconMap { 

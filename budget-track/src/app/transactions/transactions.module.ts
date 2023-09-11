@@ -5,7 +5,7 @@ import { RecentTransactionsComponent } from './recent-transactions/recent-transa
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OverviewComponent } from './overview/overview.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CreateTransactionComponent,
@@ -16,6 +16,7 @@ import { OverviewComponent } from './overview/overview.component';
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   exports:[
     CreateTransactionComponent,

@@ -1,32 +1,32 @@
-<form>
+<form (ngSubmit)="addTransaction(addTransactionForm)" #addTransactionForm="ngForm">
   <div>
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Finance Record Type</mat-label>
-      <mat-select>
-        <mat-option value="expense">Expense</mat-option>
-        <mat-option value="Income">Income</mat-option>
+      <mat-select name="isIncome">
+        <mat-option value="expense" (click)="isIncome(false)">Expense</mat-option>
+        <mat-option value="Income" (click)="isIncome(true)">Income</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
-  <div>
+  <div *ngIf="!transaction.isIncome">
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Category</mat-label>
-      <mat-select>
-        <mat-option value="expense">Expense</mat-option>
-        <mat-option value="Income">Income</mat-option>
+      <mat-select  [(ngModel)]="transaction.category" name="category">
+        <mat-option value="{{i.categoryName}}" *ngFor="let i of categories" >{{i.categoryName}}</mat-option>
+        
       </mat-select>
     </mat-form-field>
   </div>
   <div>
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="" />
+      <input matInput placeholder="" name="financename" [(ngModel)]="transaction.financeName"/>
     </mat-form-field>
   </div>
   <div>
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Amount</mat-label>
-      <input matInput placeholder="0.0" />
+      <input matInput placeholder="0.0" name="amount" [(ngModel)]="transaction.amount"/>
     </mat-form-field>
   </div>
   <div>
@@ -36,7 +36,7 @@
       class="example-form-field"
     >
       <mat-label>Choose a date</mat-label>
-      <input matInput [matDatepicker]="datepicker" />
+      <input matInput [matDatepicker]="datepicker" name="date" [(ngModel)]="transaction.createdAt"/>
       <mat-hint>MM/DD/YYYY</mat-hint>
       <mat-datepicker-toggle
         matIconSuffix
@@ -55,10 +55,10 @@
   <div>
     <mat-form-field class="full-width" appearance="outline">
       <mat-label>Description</mat-label>
-      <textarea matInput placeholder="black bike with large tires"></textarea>
+      <textarea matInput placeholder="black bike with large tires" name="description" [(ngModel)]="transaction.description"></textarea>
     </mat-form-field>
   </div>
   <div>
-    <button mat-raised-button>Save</button>
+    <button mat-raised-button type="submit">Save</button>
   </div>
 </form>

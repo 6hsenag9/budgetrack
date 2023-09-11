@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionservService } from '../transactionserv.service';
-import { MonthlyTransactions } from '../transaction';
+import { MonthlyTransactions, Transaction } from '../transaction';
 
 @Component({
   selector: 'app-overview',
@@ -8,7 +8,7 @@ import { MonthlyTransactions } from '../transaction';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit{
-  monthlyTransactions:MonthlyTransactions[] = [];
+  monthlyTransactions:Transaction[] = [];
   months:string[] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
   years:number[] = [2023]
   constructor(private transactionservService: TransactionservService){

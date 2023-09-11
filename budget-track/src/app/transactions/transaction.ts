@@ -1,12 +1,11 @@
 export interface Transaction {
-    amount: number,
-    createdAt: string,
-    categoryName: {
-        categoryName: string
-    },
-    financeName: string,
-    id: string,
-    isIncome: boolean
+    amount: number|undefined,
+    createdAt: Date,
+    category: string|"",
+    financeName: string|"",
+    id?: string|"",
+    isIncome: boolean|undefined,
+    description: string|"",
 }
 
 export interface MonthlyTransactions extends Transaction{
